@@ -1,0 +1,31 @@
+{% extends "story/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <form>
+
+        <label for="first_name">Your First Name<span>*</span></label>
+        <input type="text" id="first_name" name="first_name" placeholder="Your name.." required>
+
+        <label for="last_name">Your Last Name<span>*</span></label>
+        <input type="text" id="last_name" name="last_name" placeholder="Your last name.." required>
+
+        <label for="email">Your Email Address<span>*</span></label>
+        <input type="text" id="email" name="email" placeholder="Your email address.." required>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="blank">------------</option>
+            <option value="bulgaria">BULGARIA</option>
+            <option value="usa">GERMANY</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject<span>*</span></label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
+{% endblock content %}

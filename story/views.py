@@ -15,3 +15,10 @@ def about(request):
         'title': "About Us"
     }
     return render(request, 'story/about.html', context)
+
+
+def contact(request):
+    context = {
+        'title': "Contact Us"
+    }
+    return render(request, 'story/contact.html', context)

@@ -1,11 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from story.models import Story
 
 
 def landing(request):
     context = {
-        'title': "Home|Tell Us A Story"
+        'title': "Home|Tell Us A Story",
+        'stories': Story.objects.all(),
     }
     return render(request, 'story/landing.html', context)
 

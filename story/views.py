@@ -24,6 +24,7 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
+            form.save()
             f_name = form.cleaned_data['first_name']
             l_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
@@ -39,7 +40,7 @@ def contact(request):
                       )
 
             context = {
-                'title': "Success",
+                'title': "Thank You",
                 'f_name': f_name,
                 'l_name': l_name,
             }

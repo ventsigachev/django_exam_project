@@ -1,17 +1,7 @@
 {% extends "story/base.html" %}
-{% load static %}
-
 {% block content %}
-    {% for story in stories %}
-        <article class="story content-section">
-            <div class="story-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">{{ story.author }}</a>
-                    <small class="text-muted">{{ story.date }}</small>
-                </div>
-                <h2><a class="article-title" href="#">{{ story.title }}</a></h2>
-                <p class="article-content">{{ story.content }}</p>
-            </div>
-        </article>
-    {% endfor %}
+    <h2>
+    LANDING
+    </h2>
+
 {% endblock content %}

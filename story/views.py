@@ -7,10 +7,17 @@ from django.core.mail import send_mail
 
 def landing(request):
     context = {
+        'title': "Welcome! Nice to Have You Here!"
+    }
+    return render(request, 'story/landing.html', context)
+
+
+def home(request):
+    context = {
         'title': "Home|Tell Us A Story",
         'stories': Story.objects.all(),
     }
-    return render(request, 'story/landing.html', context)
+    return render(request, 'story/home.html', context)
 
 
 def about(request):

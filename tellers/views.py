@@ -11,8 +11,8 @@ def sign_up(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data["username"]
-            messages.success(request, f"Account created for teller {username}!")
-            return redirect('story landing')
+            messages.success(request, f" Hello, {username}! Your Account has been created! You are now able to SignIn.")
+            return redirect('login')
     else:
         form = TellerRegistrationForm()
     context = {

@@ -1,0 +1,12 @@
+{% extends "story/base.html" %}
+
+
+{% block content %}
+    <h1>You Have been Signed Out!</h1>
+    <br/>
+    <div class="border-top pt-10">
+        <small class="text-muted">
+            Need To Sign In Back? <a href="{% url 'login' %}">Sign In</a>
+        </small>
+    </div>
+{% endblock content %}

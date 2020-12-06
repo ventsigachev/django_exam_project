@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'teller/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'user/signup.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'story/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'story/contact.css' %}">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -54,11 +54,11 @@
                         <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
                     {% endif %}
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'teller profile' %}">Hello, {{ user.username }}! PROFILE</a></li>
+                        <li><a href="{% url 'user profile' %}">Hello, {{ user.username }}! PROFILE</a></li>
                         <li><a href="{% url 'logout' %}">Sign Out</a></li>
                     {% else %}
                         <li><a href="{% url 'login' %}">Sign In</a></li>
-                        <li><a href="{% url 'teller signup' %}">Sign Up</a></li>
+                        <li><a href="{% url 'user signup' %}">Sign Up</a></li>
                     {% endif %}
                 </ul>
             </div><!-- /.navbar-collapse -->

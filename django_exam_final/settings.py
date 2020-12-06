@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'story',
-    'tellers',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -141,7 +141,7 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
 
-# Custom LOGIN REDIRECTION after user is loggedIn instead of profile page
+# Custom LOGIN REDIRECTION that override the django default redirect to profile page
 LOGIN_REDIRECT_URL = 'story home'
-# Custom LOGIN URL for @login_required
+# Custom LOGIN URL for @login_required and ?next= in the browser
 LOGIN_URL = 'login'

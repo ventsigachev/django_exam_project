@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from tellers.forms import TellerRegistrationForm
+from users.forms import TellerRegistrationForm
 from django.contrib import messages
 
 # Create your views here.
@@ -21,9 +21,9 @@ def sign_up(request):
         'form': form
     }
 
-    return render(request, 'tellers/signup.html', context)
+    return render(request, 'users/signup.html', context)
 
 
 @login_required
-def teller_profile(request):
-    return render(request, 'tellers/teller_profile.html')
+def user_profile(request):
+    return render(request, 'users/user_profile.html')

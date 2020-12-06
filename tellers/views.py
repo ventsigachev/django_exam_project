@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from tellers.forms import TellerRegistrationForm
 from django.contrib import messages
 
@@ -21,3 +22,8 @@ def sign_up(request):
     }
 
     return render(request, 'tellers/signup.html', context)
+
+
+@login_required
+def teller_profile(request):
+    return render(request, 'tellers/teller_profile.html')

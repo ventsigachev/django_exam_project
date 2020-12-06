@@ -141,5 +141,7 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
 
-# LOGIN REDIRECTION if needed
+# Custom LOGIN REDIRECTION after user is loggedIn instead of profile page
 LOGIN_REDIRECT_URL = 'story home'
+# Custom LOGIN URL for @login_required
+LOGIN_URL = 'login'

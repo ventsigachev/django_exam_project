@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
 
 from story.models import Story
 from story.forms import ContactForm
-from django.core.mail import send_mail
 
 
 def landing(request):
@@ -12,6 +13,7 @@ def landing(request):
     return render(request, 'story/landing.html', context)
 
 
+@login_required
 def home(request):
     context = {
         'title': "Home|Tell Us A Story",

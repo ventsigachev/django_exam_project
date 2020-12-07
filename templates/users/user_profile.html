@@ -1,8 +1,37 @@
 {% extends "story/base.html" %}
+{% load static %}
 
 
 {% block content %}
-    <h1>{{ user.username }}</h1>
+    <div class="content-section">
+        <div class="media">
+            <img class="account-img" src="{{ user.userprofile.picture.url }}"
+                 alt="User {{ user.username }} Profile Picture">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+
+            </div>
+            <br><br>
+            <div class="media-body">
+                <h2 class="account-heading">First Name: {{ user.userprofile.first_name }}</h2>
+                <br><br>
+                <h2 class="account-heading">Last Name: {{ user.userprofile.last_name }}</h2>
+                <br><br>
+                <h2 class="account-heading">User Info: {{ user.userprofile.info }}</h2>
+                <br><br>
+                {% if age %}
+                <h2 class="account-heading">User Age: {{ user.userprofile.age }}</h2>
+                {% else %}
+                <h2 class="account-heading">User Age: </h2>
+                {% endif %}
+                <br><br>
+                <h2 class="account-heading">User Location: {{ user.userprofile.location }}</h2>
+
+            </div>
+        </div>
+        <!-- Place for Form if needed -->
+    </div>
 
 
 {% endblock content %}

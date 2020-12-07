@@ -26,4 +26,8 @@ def sign_up(request):
 
 @login_required
 def user_profile(request):
-    return render(request, 'users/user_profile.html')
+
+    context = {
+        'title': "User Profile"
+    }
+    return render(request, 'users/user_profile.html', context)

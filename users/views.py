@@ -28,6 +28,6 @@ def sign_up(request):
 def user_profile(request):
 
     context = {
-        'title': "User Profile"
+        'title': "User Profile",
     }
     return render(request, 'users/user_profile.html', context)

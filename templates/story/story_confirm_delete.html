@@ -1,0 +1,20 @@
+{% extends "story/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="post" action="">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="bottom mb-4">Delete Story</legend>
+                <p>Title: {{ object.title }}</p>
+                <legend class="bottom mb-4">Content: {{ object.content }}</legend>
+                <h2>Really want to delete this story?</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-danger" type="submit">Confirm Deletion</button>
+                <a class="btn btn-success" href="{% url 'story home' %}">Cancel Deletion</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

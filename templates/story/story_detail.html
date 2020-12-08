@@ -1,0 +1,23 @@
+{% extends "story/base.html" %}
+{% load static %}
+
+{% block content %}
+    <article class="media content-section">
+    <img src="{{ object.author.userprofile.picture.url }}" alt="image" height="55" width="55">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date }}</small>
+            </div>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+        </div>
+    </article>
+    {% if story.author == user  %}
+    <a class="btn btn-default btn-sm" href="{% url 'story update' object.id%}">Edit Story</a>
+    <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id%}">Delete Story</a>
+    {% elif user.is_superuser %}
+    <a class="btn btn-default btn-sm" href="{% url 'story update' object.id%}">Edit Story</a>
+    <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id%}">Delete Story</a>
+    {% endif %}
+{% endblock content %}

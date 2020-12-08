@@ -1,0 +1,17 @@
+{% extends "story/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="post" action="">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="bottom mb-4">{{ title }}</legend>
+                {{ form.as_p }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">{{ title }}</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 class TellerRegistrationForm(UserCreationForm):
     required_css_class = 'required'
+    # Add default "required" css classes to form labels
     email = forms.EmailField(required=True)
 
     class Meta:

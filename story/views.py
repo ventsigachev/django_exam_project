@@ -87,6 +87,7 @@ class StoryListView(LoginRequiredMixin, UserPassesTestMixin, ListView, ABC):
 
 class StoryDetailView(LoginRequiredMixin, DetailView):
     model = Story
+    extra_context = {'title': "Detail View"}
 
 
 class StoryCreateView(LoginRequiredMixin, CreateView):

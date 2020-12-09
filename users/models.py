@@ -18,6 +18,7 @@ class UserProfile(models.Model):
     def __str__(self):
         return f"User {self.user.username} Profile"
 
+
 # Using Django Signals to create automatically user profile when user is created
 
 

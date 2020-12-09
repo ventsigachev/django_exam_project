@@ -14,10 +14,10 @@
         </div>
     </article>
     {% if story.author == user  %}
-    <a class="btn btn-default btn-sm" href="{% url 'story update' object.id%}">Edit Story</a>
-    <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id%}">Delete Story</a>
+        <a class="btn btn-default btn-sm" href="{% url 'story update' object.id %}">Edit Story</a>
+        <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id %}">Delete Story</a>
     {% elif user.is_superuser %}
-    <a class="btn btn-default btn-sm" href="{% url 'story update' object.id%}">Edit Story</a>
-    <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id%}">Delete Story</a>
+        <a class="btn btn-default btn-sm" href="{% url 'story update' object.id %}">Edit Story</a>
+        <a class="btn btn-default btn-sm" href="{% url 'story delete' object.id %}">Delete Story</a>
     {% endif %}
 {% endblock content %}

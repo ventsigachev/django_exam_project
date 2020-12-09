@@ -24,8 +24,9 @@ ul {
   color: #ffffff;
 }
 
-.site-header .navbar-nav .nav-link.active {
+.site-header .navbar-nav .nav-link:active {
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .content-section {

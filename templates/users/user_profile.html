@@ -27,11 +27,8 @@
                 <br>
                 <h2 class="account-heading">User Location: {{ user.userprofile.location }}</h2>
                 <br><br>
-
             </div>
-            <button class="btn btn-warning" type="submit">Edit Profile</button>
         </div>
-        <!-- Place for Form if needed -->
     </div>
-
+    <a class="btn btn-default btn-sm" href="{% url 'profile update' %}">Edit Profile</a>
 {% endblock content %}

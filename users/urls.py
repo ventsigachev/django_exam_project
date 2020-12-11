@@ -10,4 +10,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name="users/logout.html",
                                                   extra_context={"title": "Signed Out"}), name='logout'),
     path('profile/', views.user_profile, name='user profile'),
+    path('profile/update/', views.profile_update, name='profile update'),
 ]
